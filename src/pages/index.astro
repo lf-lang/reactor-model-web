@@ -1,0 +1,210 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<main class="page">
+		<section class="hero">
+			<h1>Reactor Model of Computation</h1>
+			<p class="lead">
+				The reactor model is a way to structure concurrent, event-driven systems so that their
+				behavior is deterministic, understandable, and predictable even in the presence of real-time
+				interaction, distribution, and parallelism.
+			</p>
+		</section>
+
+		<section class="overview">
+			<h2>High-level overview</h2>
+			<p>
+				In the reactor model, systems are built from <strong>reactors</strong>: modular components
+				that communicate via input and output ports. Reactors react to discrete events, which
+				are tagged with logical time, and are scheduled according to clear rules that respect
+				causality.
+			</p>
+			<p>
+				Because reactions are triggered by time-stamped events rather than low-level threads or
+				shared memory, the same design can be executed on a single machine, across a network, or on
+				resource-constrained embedded platforms while preserving deterministic behavior (when
+				desired). This makes the reactor model especially well-suited for
+				<strong>cyber-physical systems</strong>, <strong>real-time control</strong>, and
+				<strong>autonomous robotics</strong>.
+			</p>
+			<ul class="key-points">
+				<li><strong>Modular structure</strong>: systems are composed from reactors with well-defined interfaces.</li>
+				<li><strong>Logical time</strong>: events carry time tags, clarifying ordering and causality.</li>
+				<li><strong>Deterministic concurrency</strong>: parallel execution is allowed without sacrificing predictable outcomes.</li>
+				<li><strong>Platform versatility</strong>: the same model spans desktops, embedded devices, and distributed systems.</li>
+			</ul>
+		</section>
+
+		<section class="projects">
+			<h2>Projects using the reactor model</h2>
+			<div class="cards">
+				<a
+					class="card"
+					href="https://lf-lang.org"
+					target="_blank"
+					rel="noreferrer"
+				>
+					<h3>Lingua Franca (`lf-lang.org`)</h3>
+					<p>
+						Lingua Franca is a coordination language and toolchain for specifying reactor-based
+						systems and generating efficient code for a variety of platforms and targets.
+					</p>
+				</a>
+
+				<a
+					class="card"
+					href="https://www.xronos.com/#platform"
+					target="_blank"
+					rel="noreferrer"
+				>
+					<h3>Xronos Platform</h3>
+					<p>
+						Xronos provides ready-to-deploy software infrastructure for scalable, safe,
+						AI-driven robotics and mobility solutions, with a focus on deterministic development,
+						real-time observability, and seamless integration.
+					</p>
+				</a>
+
+				<a
+					class="card"
+					href="https://github.com/lf-lang/reactor-uc"
+					target="_blank"
+					rel="noreferrer"
+				>
+					<h3>`reactor-uc` Runtime</h3>
+					<p>
+						`reactor-uc` is a lightweight reactor runtime targeted at distributed,
+						resource-constrained embedded systems, supporting platforms such as Zephyr, RIOT,
+						Raspberry Pi Pico, and POSIX hosts.
+					</p>
+				</a>
+			</div>
+		</section>
+	</main>
+
+	<style>
+		.page {
+			max-width: 960px;
+			margin: 0 auto;
+			padding: 3rem 1.5rem 4rem;
+			font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+			line-height: 1.6;
+			color: #111827;
+		}
+
+		.hero {
+			margin-bottom: 2.5rem;
+		}
+
+		h1 {
+			font-size: clamp(2.2rem, 3vw + 1.5rem, 3rem);
+			margin: 0 0 0.75rem;
+			letter-spacing: -0.03em;
+		}
+
+		.lead {
+			font-size: 1.1rem;
+			max-width: 46rem;
+			color: #374151;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			margin: 2.5rem 0 1rem;
+			letter-spacing: -0.02em;
+		}
+
+		p {
+			margin: 0 0 0.75rem;
+			color: #374151;
+		}
+
+		.key-points {
+			margin: 1rem 0 0;
+			padding-left: 1.25rem;
+			color: #374151;
+		}
+
+		.key-points li + li {
+			margin-top: 0.25rem;
+		}
+
+		.projects {
+			margin-top: 3rem;
+		}
+
+		.cards {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+			gap: 1.25rem;
+			margin-top: 1rem;
+		}
+
+		.card {
+			display: block;
+			padding: 1.25rem 1.5rem;
+			border-radius: 0.75rem;
+			border: 1px solid #e5e7eb;
+			background: #ffffff;
+			text-decoration: none;
+			color: inherit;
+			box-shadow:
+				0 1px 2px rgba(15, 23, 42, 0.04),
+				0 1px 3px rgba(15, 23, 42, 0.08);
+			transition:
+				transform 0.12s ease-out,
+				box-shadow 0.12s ease-out,
+				border-color 0.12s ease-out,
+				background-color 0.12s ease-out;
+		}
+
+		.card h3 {
+			margin: 0 0 0.5rem;
+			font-size: 1.1rem;
+			letter-spacing: -0.01em;
+		}
+
+		.card p {
+			margin: 0;
+			font-size: 0.95rem;
+			color: #4b5563;
+		}
+
+		.card:hover {
+			transform: translateY(-2px);
+			border-color: #c4b5fd;
+			box-shadow:
+				0 8px 20px rgba(79, 70, 229, 0.12),
+				0 4px 8px rgba(15, 23, 42, 0.08);
+			background: #f9fafb;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			.page {
+				color: #e5e7eb;
+				background: radial-gradient(circle at top, #1f2937 0, #020617 55%);
+			}
+
+			p,
+			.key-points,
+			.card p {
+				color: #d1d5db;
+			}
+
+			.card {
+				border-color: #1f2937;
+				background: rgba(15, 23, 42, 0.9);
+				box-shadow:
+					0 1px 2px rgba(15, 23, 42, 0.6),
+					0 2px 6px rgba(15, 23, 42, 0.9);
+			}
+
+			.card:hover {
+				border-color: #a5b4fc;
+				background: rgba(15, 23, 42, 0.95);
+			}
+		}
+	</style>
+</Layout>
