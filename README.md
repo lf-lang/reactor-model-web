@@ -1,10 +1,7 @@
-# Astro Starter Kit: Basics
+# Reactor-Model Website
 
-```sh
-npm create astro@latest -- --template basics
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This website is built using [Astro](https://astro.build) and [deployed to GitHub pages](https://docs.astro.build/en/guides/deploy/github/).
+The GitHub URL for this page is https://lf-lang.github.io/reactor-model-web.
 
 ## 🚀 Project Structure
 
