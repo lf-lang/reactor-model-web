@@ -1,0 +1,434 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const DATE_URL = 'https://www.date-conference.com/';
+const LF_DOCS_URL = 'https://www.lf-lang.org/docs/';
+const LF_RESEARCH_URL = 'https://www.lf-lang.org/research';
+const EASychair_URL = 'https://easychair.org/conferences?conf=recps2026';
+---
+
+<Layout title="ReCPS Workshop at DATE 2026 — Reactor Model of Computation">
+	<main class="page">
+		<p class="back-link"><a href="/events/">← Events</a></p>
+		<section class="hero event-hero">
+			<span class="event-badge upcoming">Upcoming Event</span>
+			<h1>Reactive CPS (ReCPS)</h1>
+			<p class="hero-subtitle">
+				Workshop on Reactive Cyber-Physical Systems: Design, Simulation, and Coordination
+			</p>
+			<div class="event-meta">
+				<span>📅 April 20, 2026</span>
+				<span>📍 Verona, Italy</span>
+				<span>
+					🎯 Co-located with <a href={DATE_URL} target="_blank" rel="noopener noreferrer" class="hero-link">DATE 2026</a>
+				</span>
+			</div>
+		</section>
+
+		<section class="content-section">
+			<h2>About the Workshop</h2>
+			<p>
+				The Reactive CPS (ReCPS) Workshop at <a href={DATE_URL} target="_blank" rel="noopener noreferrer">DATE 2026</a> is a new workshop dedicated to the modeling, design, simulation, analysis, and verification of reactive cyber-physical systems (CPS). ReCPS emphasizes reactive CPS architectures that continuously interact with their environment in real time, leveraging methodologies and tools such as the reactor model of computation and the <a href={LF_DOCS_URL} target="_blank" rel="noopener noreferrer">Lingua Franca</a> coordination language.
+			</p>
+
+			<h3>Tentative Workshop Program</h3>
+			<p>The workshop program will feature:</p>
+			<ul>
+				<li><strong>Keynote talk by Prof. Edward A. Lee, UC Berkeley</strong></li>
+				<li><strong>Presentations of technical papers</strong></li>
+				<li><strong>Demo sessions</strong></li>
+			</ul>
+		</section>
+
+		<section class="content-section alt">
+			<h2>👥 Organizers</h2>
+			<div class="card-block">
+				<ul class="organizers-list">
+					<li><strong>General Chair:</strong> Hokeun Kim (Arizona State University, United States)</li>
+					<li><strong>Program Chair:</strong> Sebastiano Gaiardelli (University of Verona, Italy)</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="content-section">
+			<h2>📋 Program Committee</h2>
+			<div class="card-block">
+				<ul>
+					<li>David Broman, KTH Royal Institute of Technology, Sweden</li>
+					<li>Samarjit Chakraborty, University of North Carolina at Chapel Hill, USA</li>
+					<li>Enrico Fraccaroli, University of Verona, Italy</li>
+					<li>Franco Fummi, University of Verona, Italy</li>
+					<li>Sebastiano Gaiardelli, University of Verona, Italy</li>
+					<li>Alain Girault, INRIA – Grenoble, France</li>
+					<li>Christoph Grimm, TU Kaiserslautern, Germany</li>
+					<li>Chadlia Jerad, University of Tunis El Manar, Tunisia</li>
+					<li>Hokeun Kim, Arizona State University, USA</li>
+					<li>Edward A. Lee, UC Berkeley, USA</li>
+					<li>Shaokai Lin, UC Berkeley, USA</li>
+					<li>Frank Oppenheimer, OFFIS, Germany</li>
+					<li>Francesco Paladino, UC Berkeley, USA</li>
+					<li>Graziano Pravadelli, University of Verona, Italy</li>
+					<li>Martin Schoeberl, Technical University of Denmark, Denmark</li>
+					<li>Sara Vinco, Politecnico di Torino, Italy</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="content-section alt">
+			<h2>📣 Call for Papers</h2>
+			<p>
+				As we advance towards a hyper-connected future defined by smart sensors and devices operating together as complex systems-of-systems, the massive adoption of Artificial Intelligence combined with the inherent unpredictability of distributed interactions presents a fundamental challenge to system reliability.
+			</p>
+			<p>
+				In such a scenario, Reactive Cyber-Physical Systems (ReCPS) are crucial for next-generation intelligent and autonomous systems, continuously interacting with their environment in real time. By leveraging methodologies and tools such as the reactor model of computation and the Lingua Franca coordination language, these emerging frameworks provide deterministic and composable concurrency for CPS design. This enables the design of more predictable and reliable system behavior than conventional CPS design approaches.
+			</p>
+			<p>
+				This workshop focuses on foundational methods and emerging trends in design, simulation, and coordination of these reactive systems. These approaches promise enhanced predictability and reliability compared to conventional CPS design.
+			</p>
+			<p>We invite original research contributions and demonstrations on topics related to Reactive Cyber-Physical Systems.</p>
+		</section>
+
+		<section class="content-section">
+			<h2>📋 Topics of Interest</h2>
+			<p>Scope and topics to be considered include (but are not limited to):</p>
+			<div class="card-block two-cols">
+				<ul>
+					<li>Cyber-physical production systems (CPPS)</li>
+					<li>Safety-critical CPS</li>
+					<li>Distributed CPS</li>
+					<li>Real-time scheduling and coordination</li>
+					<li>Simulation of CPS</li>
+					<li>Digital twins</li>
+				</ul>
+				<ul>
+					<li>Verification and testing of CPS</li>
+					<li>Predictability and determinism of CPS</li>
+					<li>Integration and deployment of CPS</li>
+					<li>AI/ML-driven autonomous CPS</li>
+					<li>Modeling & simulation of human-in-the-loop CPS</li>
+					<li>CPS-human interaction via LLMs</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="content-section alt">
+			<h2>📅 Important Dates</h2>
+			<div class="card-block">
+				<ul class="dates-list">
+					<li><strong>February 16, 2026 (AoE):</strong> Research papers and demo abstracts submission deadline</li>
+					<li><strong>March 2, 2026:</strong> Notification of acceptance</li>
+					<li><strong>[Tentative] Afternoon of April 20, 2026:</strong> Workshop at DATE 2026, Verona, Italy</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="content-section">
+			<h2>📝 Submission Guidelines</h2>
+			<p>We invite the following types of contributions:</p>
+
+			<div class="card-block">
+				<h4>Research Papers</h4>
+				<p>
+					Original research contributions on topics related to reactive cyber-physical systems design, simulation, verification, and deployment.
+				</p>
+				<ul>
+					<li><strong>Page limit:</strong> 4 pages (including references)</li>
+					<li><strong>Format:</strong> IEEE conference format</li>
+				</ul>
+			</div>
+
+			<div class="card-block">
+				<h4>Demo Abstracts</h4>
+				<p>
+					Short abstracts describing working prototypes, tools, or demonstrations related to reactive CPS and the Lingua Franca ecosystem.
+				</p>
+				<ul>
+					<li><strong>Page limit:</strong> 2 pages (including references)</li>
+					<li><strong>Format:</strong> IEEE conference format</li>
+				</ul>
+			</div>
+
+			<div class="card-block">
+				<h4>Review Process</h4>
+				<p>
+					Single blind review (no need to anonymize submissions) by a program committee with acceptance decisions.
+				</p>
+				<p>
+					<strong>Submission system:</strong> <a href={EASychair_URL} target="_blank" rel="noopener noreferrer">EasyChair</a>
+				</p>
+			</div>
+		</section>
+
+		<section class="content-section alt">
+			<h2>📄 Publication</h2>
+			<div class="card-block">
+				<p>
+					Accepted manuscripts will be distributed to the workshop attendees, but will not be officially published, so that the authors can use the materials for their publication later.
+				</p>
+			</div>
+		</section>
+
+		<section class="content-section cta-section">
+			<h2>Related Resources</h2>
+			<p>Learn more about reactive programming and Lingua Franca.</p>
+			<div class="cta-buttons">
+				<a href={DATE_URL} target="_blank" rel="noopener noreferrer" class="btn btn-primary">DATE 2026 Conference</a>
+				<a href={LF_DOCS_URL} target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Lingua Franca Docs</a>
+				<a href={LF_RESEARCH_URL} target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Research Publications</a>
+			</div>
+		</section>
+	</main>
+
+	<style>
+		.page {
+			max-width: 960px;
+			margin: 0 auto;
+			padding: 3rem 1.5rem 4rem;
+			font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+			line-height: 1.6;
+			color: #111827;
+		}
+
+		.back-link {
+			margin: 0 0 1rem;
+			font-size: 0.95rem;
+		}
+
+		.back-link a {
+			color: #6b7280;
+			text-decoration: none;
+		}
+
+		.back-link a:hover {
+			color: #6366f1;
+			text-decoration: underline;
+		}
+
+		.hero {
+			margin-bottom: 2.5rem;
+		}
+
+		.event-hero {
+			background: linear-gradient(135deg, #4338ca 0%, #6366f1 100%);
+			color: white;
+			padding: 3rem 1.5rem;
+			border-radius: 0.75rem;
+			text-align: center;
+		}
+
+		.event-badge {
+			display: inline-block;
+			padding: 0.25rem 1rem;
+			border-radius: 1.25rem;
+			font-size: 0.85rem;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			margin-bottom: 1rem;
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+
+		.event-badge.upcoming {
+			background-color: #059669;
+		}
+
+		.event-hero h1 {
+			font-size: clamp(1.75rem, 2.5vw + 1rem, 2.5rem);
+			margin: 0 0 0.5rem;
+			color: white;
+		}
+
+		.hero-subtitle {
+			max-width: 700px;
+			margin: 0 auto 1.5rem;
+			font-size: 1.15rem;
+			opacity: 0.95;
+		}
+
+		.event-meta {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 1.5rem;
+			font-size: 1rem;
+		}
+
+		.hero-link {
+			color: white;
+			text-decoration: underline;
+		}
+
+		.hero-link:hover {
+			opacity: 0.9;
+		}
+
+		.content-section {
+			margin: 2.5rem 0;
+		}
+
+		.content-section.alt {
+			background: #f9fafb;
+			padding: 1.5rem;
+			border-radius: 0.5rem;
+			margin-left: -1.5rem;
+			margin-right: -1.5rem;
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+		}
+
+		.content-section h2 {
+			font-size: 1.35rem;
+			margin: 0 0 1rem;
+		}
+
+		.content-section h3 {
+			font-size: 1.15rem;
+			margin: 1.5rem 0 0.75rem;
+		}
+
+		.content-section h4 {
+			font-size: 1.05rem;
+			margin: 0 0 0.5rem;
+		}
+
+		.content-section p, .content-section ul {
+			margin: 0 0 0.75rem;
+			color: #374151;
+		}
+
+		.content-section a {
+			color: #6366f1;
+			text-decoration: none;
+		}
+
+		.content-section a:hover {
+			text-decoration: underline;
+		}
+
+		.card-block {
+			background: #fff;
+			border: 1px solid #e5e7eb;
+			border-radius: 0.5rem;
+			padding: 1.25rem 1.5rem;
+			margin: 1rem 0;
+		}
+
+		.card-block.two-cols {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1.5rem;
+		}
+
+		@media (max-width: 640px) {
+			.card-block.two-cols {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		.organizers-list, .dates-list {
+			list-style: none;
+			padding-left: 0;
+			margin: 0;
+		}
+
+		.organizers-list li, .dates-list li {
+			padding: 0.5rem 0;
+			border-bottom: 1px solid #e5e7eb;
+		}
+
+		.organizers-list li:last-child, .dates-list li:last-child {
+			border-bottom: none;
+		}
+
+		.cta-section {
+			text-align: center;
+			margin-top: 3rem;
+		}
+
+		.cta-buttons {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 1rem;
+			margin-top: 1.5rem;
+		}
+
+		.btn {
+			display: inline-block;
+			padding: 0.75rem 1.5rem;
+			border-radius: 0.5rem;
+			font-weight: 500;
+			text-decoration: none;
+			transition: background-color 0.15s, color 0.15s;
+		}
+
+		.btn-primary {
+			background: #6366f1;
+			color: white;
+		}
+
+		.btn-primary:hover {
+			background: #4f46e5;
+		}
+
+		.btn-secondary {
+			background: #fff;
+			color: #374151;
+			border: 1px solid #e5e7eb;
+		}
+
+		.btn-secondary:hover {
+			background: #f9fafb;
+			border-color: #6366f1;
+			color: #6366f1;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			.page {
+				color: #e5e7eb;
+				background: radial-gradient(circle at top, #1f2937 0, #020617 55%);
+			}
+
+			.back-link a {
+				color: #9ca3af;
+			}
+
+			.back-link a:hover {
+				color: #a5b4fc;
+			}
+
+			.event-hero {
+				background: linear-gradient(135deg, #312e81 0%, #4338ca 100%);
+			}
+
+			.content-section.alt {
+				background: rgba(30, 41, 59, 0.5);
+			}
+
+			.content-section p, .content-section ul {
+				color: #d1d5db;
+			}
+
+			.card-block {
+				background: rgba(15, 23, 42, 0.8);
+				border-color: #1f2937;
+			}
+
+			.organizers-list li, .dates-list li {
+				border-color: #374151;
+			}
+
+			.btn-secondary {
+				background: rgba(15, 23, 42, 0.9);
+				color: #e5e7eb;
+				border-color: #374151;
+			}
+
+			.btn-secondary:hover {
+				background: rgba(30, 41, 59, 0.9);
+				border-color: #6366f1;
+				color: #a5b4fc;
+			}
+		}
+	</style>
+</Layout>
