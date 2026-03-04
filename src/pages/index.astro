@@ -38,15 +38,8 @@ import Layout from '../layouts/Layout.astro';
 		</section>
 
 		<section class="projects">
-			<h2>Projects and events</h2>
+			<h2>Projects using the reactor model</h2>
 			<div class="cards">
-				<a class="card" href="/events/">
-					<h3>Events &amp; workshops</h3>
-					<p>
-						Past and upcoming workshops, including TCRS (Time-Centric Reactive Software),
-						and other events related to the reactor model.
-					</p>
-				</a>
 				<a
 					class="card"
 					href="https://lf-lang.org"
@@ -85,6 +78,19 @@ import Layout from '../layouts/Layout.astro';
 						`reactor-uc` is a lightweight reactor runtime targeted at distributed,
 						resource-constrained embedded systems, supporting platforms such as Zephyr, RIOT,
 						Raspberry Pi Pico, and POSIX hosts.
+					</p>
+				</a>
+			</div>
+		</section>
+
+		<section class="events">
+			<h2>Events</h2>
+			<div class="cards">
+				<a class="card" href="/events/">
+					<h3>Events &amp; workshops</h3>
+					<p>
+						Past and upcoming workshops, including TCRS (Time-Centric Reactive Software)
+						and ReCPS, and other events related to the reactor model.
 					</p>
 				</a>
 			</div>
@@ -138,7 +144,8 @@ import Layout from '../layouts/Layout.astro';
 			margin-top: 0.25rem;
 		}
 
-		.projects {
+		.projects,
+		.events {
 			margin-top: 3rem;
 		}
 
