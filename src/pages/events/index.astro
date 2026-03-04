@@ -1,0 +1,223 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const tcrsWorkshops = [
+  {
+    title: "TCRS '25: Time-Centric Reactive Software",
+    date: "2025-10-02",
+    location: "Taipei, Taiwan (ESWEEK 2025)",
+    description:
+      "Third edition of the workshop on Time-Centric Reactive Software, co-located with Embedded Systems Week (ESWEEK) 2025 at the Taipei International Convention Center.",
+    link: "https://www.tcrs.io/",
+  },
+  {
+    title: "TCRS '24: Time-Centric Reactive Software",
+    date: "2024-10-03",
+    location: "Raleigh, NC, USA (ESWEEK 2024)",
+    description:
+      "Second edition of the workshop on Time-Centric Reactive Software, co-located with Embedded Systems Week (ESWEEK) 2024.",
+    link: "https://www.tcrs.io/2024/",
+  },
+  {
+    title: "TCRS '23: Time-Centric Reactive Software",
+    date: "2023-05-09",
+    location: "San Antonio, Texas (CPS-IoT Week 2023)",
+    description:
+      "First edition of the workshop on Time-Centric Reactive Software, co-located with ACM/IEEE CPS-IoT Week 2023.",
+    link: "https://www.tcrs.io/2023/",
+  },
+];
+---
+
+<Layout title="Events — Reactor Model of Computation">
+	<main class="page">
+		<section class="hero">
+			<h1>Events</h1>
+			<p class="lead">
+				Workshops and events related to the reactor model and time-centric reactive systems.
+			</p>
+		</section>
+
+		<section class="events-section">
+			<h2>TCRS workshops</h2>
+			<p class="section-intro">
+				The Time-Centric Reactive Software (TCRS) workshop series brings together researchers and
+				practitioners working on reactive, time-aware software and the reactor model. Past editions
+				are linked below.
+			</p>
+			<ul class="event-list">
+				{tcrsWorkshops.map((event) => (
+					<li class="event-card">
+						<a
+							href={event.link}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="event-link"
+						>
+							<h3 class="event-title">{event.title}</h3>
+							<p class="event-meta">
+								<time datetime={event.date}>
+									{new Date(event.date + 'T12:00:00').toLocaleDateString('en-US', {
+										year: 'numeric',
+										month: 'long',
+										day: 'numeric',
+									})}
+								</time>
+								<span class="event-location"> · {event.location}</span>
+							</p>
+							<p class="event-description">{event.description}</p>
+							<span class="event-cta">Visit workshop site →</span>
+						</a>
+					</li>
+				))}
+			</ul>
+		</section>
+	</main>
+
+	<style>
+		.page {
+			max-width: 960px;
+			margin: 0 auto;
+			padding: 3rem 1.5rem 4rem;
+			font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+			line-height: 1.6;
+			color: #111827;
+		}
+
+		.hero {
+			margin-bottom: 2.5rem;
+		}
+
+		h1 {
+			font-size: clamp(2.2rem, 3vw + 1.5rem, 3rem);
+			margin: 0 0 0.75rem;
+			letter-spacing: -0.03em;
+		}
+
+		.lead {
+			font-size: 1.1rem;
+			max-width: 46rem;
+			color: #374151;
+		}
+
+		.events-section h2 {
+			font-size: 1.5rem;
+			margin: 2.5rem 0 1rem;
+			letter-spacing: -0.02em;
+		}
+
+		.section-intro {
+			margin: 0 0 1.5rem;
+			color: #374151;
+		}
+
+		.event-list {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			gap: 1.25rem;
+		}
+
+		.event-card {
+			margin: 0;
+		}
+
+		.event-link {
+			display: block;
+			padding: 1.25rem 1.5rem;
+			border-radius: 0.75rem;
+			border: 1px solid #e5e7eb;
+			background: #ffffff;
+			text-decoration: none;
+			color: inherit;
+			box-shadow:
+				0 1px 2px rgba(15, 23, 42, 0.04),
+				0 1px 3px rgba(15, 23, 42, 0.08);
+			transition:
+				transform 0.12s ease-out,
+				box-shadow 0.12s ease-out,
+				border-color 0.12s ease-out,
+				background-color 0.12s ease-out;
+		}
+
+		.event-link:hover {
+			transform: translateY(-2px);
+			border-color: #c4b5fd;
+			box-shadow:
+				0 8px 20px rgba(79, 70, 229, 0.12),
+				0 4px 8px rgba(15, 23, 42, 0.08);
+			background: #f9fafb;
+		}
+
+		.event-title {
+			margin: 0 0 0.5rem;
+			font-size: 1.15rem;
+			letter-spacing: -0.01em;
+		}
+
+		.event-meta {
+			margin: 0 0 0.5rem;
+			font-size: 0.9rem;
+			color: #6b7280;
+		}
+
+		.event-location {
+			font-style: normal;
+		}
+
+		.event-description {
+			margin: 0 0 0.5rem;
+			font-size: 0.95rem;
+			color: #4b5563;
+		}
+
+		.event-cta {
+			font-size: 0.9rem;
+			font-weight: 500;
+			color: #6366f1;
+		}
+
+		.event-link:hover .event-cta {
+			text-decoration: underline;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			.page {
+				color: #e5e7eb;
+				background: radial-gradient(circle at top, #1f2937 0, #020617 55%);
+			}
+
+			.lead,
+			.section-intro {
+				color: #d1d5db;
+			}
+
+			.event-link {
+				border-color: #1f2937;
+				background: rgba(15, 23, 42, 0.9);
+				box-shadow:
+					0 1px 2px rgba(15, 23, 42, 0.6),
+					0 2px 6px rgba(15, 23, 42, 0.9);
+			}
+
+			.event-link:hover {
+				border-color: #a5b4fc;
+				background: rgba(15, 23, 42, 0.95);
+			}
+
+			.event-meta {
+				color: #9ca3af;
+			}
+
+			.event-description {
+				color: #d1d5db;
+			}
+
+			.event-cta {
+				color: #a5b4fc;
+			}
+		}
+	</style>
+</Layout>
