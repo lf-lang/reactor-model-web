@@ -35,11 +35,17 @@ const EASychair_URL = 'https://easychair.org/conferences?conf=recps2026';
 
 			<h3>Workshop Program</h3>
 			<p><strong>Monday, April 20, 2026, 2:00–6:00 pm (14:00–18:00 CEST)</strong></p>
-			<p>The workshop program will feature:</p>
-			<ul>
-				<li><strong>Keynote talk by Prof. Edward A. Lee, UC Berkeley</strong></li>
-				<li><strong>Presentations of technical papers</strong></li>
-				<li><strong>Demo sessions</strong></li>
+			<ul class="program-schedule">
+				<li>
+					<strong>2:00–2:50 pm</strong> — Keynote<br>
+					<span class="program-speaker">Prof. Edward A. Lee, UC Berkeley</span>
+				</li>
+				<li class="program-break">Short break</li>
+				<li><strong>3:00–3:55 pm</strong> — Research Paper Session 1</li>
+				<li class="program-break">Short break</li>
+				<li><strong>4:05–5:00 pm</strong> — Research Paper Session 2</li>
+				<li class="program-break">Short break</li>
+				<li><strong>5:10–6:00 pm</strong> — Demo lightning talks, interactive demo, and networking</li>
 			</ul>
 		</section>
 
@@ -352,6 +358,30 @@ const EASychair_URL = 'https://easychair.org/conferences?conf=recps2026';
 			border-bottom: none;
 		}
 
+		.program-schedule {
+			list-style: none;
+			padding-left: 0;
+		}
+
+		.program-schedule li {
+			padding: 0.4rem 0;
+		}
+
+		.program-schedule li.program-break {
+			font-size: 0.9rem;
+			color: #6b7280;
+			font-weight: normal;
+			padding-left: 1rem;
+		}
+
+		.program-speaker {
+			display: inline-block;
+			font-size: 0.95rem;
+			color: #4b5563;
+			margin-top: 0.25rem;
+			padding-left: 0.5rem;
+		}
+
 		.cta-section {
 			text-align: center;
 			margin-top: 3rem;
@@ -421,6 +451,14 @@ const EASychair_URL = 'https://easychair.org/conferences?conf=recps2026';
 
 			.content-section p, .content-section ul {
 				color: #d1d5db;
+			}
+
+			.program-schedule li.program-break {
+				color: #9ca3af;
+			}
+
+			.program-speaker {
+				color: #9ca3af;
 			}
 
 			.card-block {
