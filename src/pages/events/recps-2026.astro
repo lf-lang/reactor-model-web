@@ -41,11 +41,100 @@ const EASychair_URL = 'https://easychair.org/conferences?conf=recps2026';
 					<span class="program-speaker">Prof. Edward A. Lee, UC Berkeley</span>
 				</li>
 				<li class="program-break">Short break</li>
-				<li><strong>3:00–3:55 pm</strong> — Research Paper Session 1</li>
+				<li>
+					<strong>3:00–3:55 pm</strong> — Research Paper Session 1
+					<table class="program-papers-table">
+						<thead>
+							<tr>
+								<th>Authors</th>
+								<th>Paper title</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Byeonggil Jun, Deeksha Prahlad, Mehdi Ghasemi and Hokeun Kim</td>
+								<td><em>Modeling and Simulation of Transformer-based Embodied Agentic AI Tasks on Heterogeneous Edge</em></td>
+							</tr>
+							<tr>
+								<td>Tejeswini Jayaramareddy, Hokeun Kim and Hoeseok Yang</td>
+								<td><em>Ensuring Deterministic Timing in a Federated GNSS Correction Pipeline with Lingua Franca</em></td>
+							</tr>
+							<tr>
+								<td>Elia Brentarolli, Davide Quaglia, Tiziano Villa, Luca Benvenuti and Michel Reniers</td>
+								<td><em>A Greenhouse as a Cyber Physical Production System: Automatic Controller Synthesis with Integrated Crop Growth Models</em></td>
+							</tr>
+							<tr>
+								<td>Georgios L. Stavrinides, Maria K. Michael and Theocharis Theocharides</td>
+								<td><em>Hybrid Proactive-Reactive DAG Scheduling in Cyber-Physical Systems Under Uncertainty</em></td>
+							</tr>
+						</tbody>
+					</table>
+				</li>
 				<li class="program-break">Short break</li>
-				<li><strong>4:05–5:00 pm</strong> — Research Paper Session 2</li>
+				<li>
+					<strong>4:05–5:00 pm</strong> — Research Paper Session 2
+					<table class="program-papers-table">
+						<thead>
+							<tr>
+								<th>Authors</th>
+								<th>Paper title</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Ruicong Ni, Giovanni Pollo and Sara Vinco</td>
+								<td><em>Deterministic Reactive Co-Simulation of a Regenerative Active Suspension</em></td>
+							</tr>
+							<tr>
+								<td>Tassilo Tanneberger, Erling Jellum, Jeronimo Castrillon and Edward Lee</td>
+								<td><em>Macros as Abstractions: Simplifying Code Generation for Lingua Franca</em></td>
+							</tr>
+							<tr>
+								<td>Samuele Santacà, Sebastiano Gaiardelli and Franco Fummi</td>
+								<td><em>xPPU-Frost: A Testbed for Evaluating Deterministic Industrial Automation Strategies</em></td>
+							</tr>
+							<tr>
+								<td>Pietro Turco, Sebastiano Gaiardelli, Enrico Fraccaroli and Franco Fummi</td>
+								<td><em>Distributed Control Logic Validation through Lingua Franca</em></td>
+							</tr>
+						</tbody>
+					</table>
+				</li>
 				<li class="program-break">Short break</li>
-				<li><strong>5:10–6:00 pm</strong> — Demo lightning talks, interactive demo, and networking</li>
+				<li>
+					<strong>5:10–5:25 pm</strong> — Demo lightning talks
+					<table class="program-papers-table">
+						<thead>
+							<tr>
+								<th>Authors</th>
+								<th>Paper title</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Pawan Kumar and Hokeun Kim</td>
+								<td><em>Drone Simulation using Operational Sensor Data with Lingua Franca</em></td>
+							</tr>
+							<tr>
+								<td>Hwisoo So and Hokeun Kim</td>
+								<td><em>Configurable Modeling and Simulation of Resilient Real-Time Scheduling</em></td>
+							</tr>
+							<tr>
+								<td>Toluwalope Elugbaju, Matthew J. Pinnock and Chanhee Lee</td>
+								<td><em>Time Bounded Integrity Enforcement for Trusted LLM Execution Using OP-TEE and Lingua Franca</em></td>
+							</tr>
+							<tr>
+								<td>Ehsan Khodadad, Luca Pezzarossa and Martin Schoeberl</td>
+								<td><em>Lingua Franca on the Patmos Processor</em></td>
+							</tr>
+							<tr>
+								<td>Manuel Branco Nardi, Daniel Avalos, George Zhao, Martina Ibanez Peredo and Chanhee Lee</td>
+								<td><em>Runtime Autonomous Driving Context Analysis using Vision Language Model and Lingua Franca</em></td>
+							</tr>
+						</tbody>
+					</table>
+				</li>
+				<li><strong>5:25–6:00 pm</strong> — Interactive demo and networking</li>
 				<li><strong>8:00 pm</strong> — Informal gathering (location TBD, tentative)</li>
 			</ul>
 		</section>
@@ -383,6 +472,31 @@ const EASychair_URL = 'https://easychair.org/conferences?conf=recps2026';
 			padding-left: 0.5rem;
 		}
 
+		.program-papers-table {
+			width: 100%;
+			margin: 0.5rem 0 0;
+			font-size: 0.9rem;
+			border-collapse: collapse;
+		}
+
+		.program-papers-table th,
+		.program-papers-table td {
+			padding: 0.5rem 0.75rem;
+			text-align: left;
+			vertical-align: top;
+			border: 1px solid #e5e7eb;
+		}
+
+		.program-papers-table th {
+			background: #f3f4f6;
+			font-weight: 600;
+			color: #374151;
+		}
+
+		.program-papers-table td em {
+			color: #374151;
+		}
+
 		.cta-section {
 			text-align: center;
 			margin-top: 3rem;
@@ -460,6 +574,20 @@ const EASychair_URL = 'https://easychair.org/conferences?conf=recps2026';
 
 			.program-speaker {
 				color: #9ca3af;
+			}
+
+			.program-papers-table th,
+			.program-papers-table td {
+				border-color: #374151;
+			}
+
+			.program-papers-table th {
+				background: rgba(30, 41, 59, 0.8);
+				color: #e5e7eb;
+			}
+
+			.program-papers-table td em {
+				color: #d1d5db;
 			}
 
 			.card-block {
