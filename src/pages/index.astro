@@ -3,107 +3,108 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<main class="page">
-		<section class="hero">
-			<h1>Reactor Model of Computation</h1>
-			<p class="lead">
-				The reactor model is a way to structure concurrent, event-driven systems so that their
-				behavior is deterministic, understandable, and predictable even in the presence of real-time
-				interaction, distribution, and parallelism.
-			</p>
-		</section>
+  <main class="page-background">
+    <div class="page">
+      <section class="hero">
+        <h1>Reactor Model of Computation</h1>
+        <p class="lead">
+          The reactor model is a way to structure concurrent, event-driven systems so that their
+          behavior is deterministic, understandable, and predictable even in the presence of real-time
+          interaction, distribution, and parallelism.
+        </p>
+      </section>
 
-		<nav class="section-nav" aria-label="Page sections">
-			<a href="#overview" class="section-nav-link">Overview</a>
-			<a href="#projects" class="section-nav-link">Projects</a>
-			<a href="#events" class="section-nav-link">Events</a>
-		</nav>
+      <nav class="section-nav" aria-label="Page sections">
+        <a href="#overview" class="section-nav-link">Overview</a>
+        <a href="#projects" class="section-nav-link">Projects</a>
+        <a href="#events" class="section-nav-link">Events</a>
+      </nav>
 
-		<section id="overview" class="overview">
-			<h2>High-level overview</h2>
-			<p>
-				In the reactor model, systems are built from <strong>reactors</strong>: modular components
-				that communicate via input and output ports. Reactors react to discrete events, which
-				are tagged with logical time, and are scheduled according to clear rules that respect
-				causality.
-			</p>
-			<p>
-				Because reactions are triggered by time-stamped events rather than low-level threads or
-				shared memory, the same design can be executed on a single machine, across a network, or on
-				resource-constrained embedded platforms while preserving deterministic behavior (when
-				desired). This makes the reactor model especially well-suited for
-				<strong>cyber-physical systems</strong>, <strong>real-time control</strong>, and
-				<strong>autonomous robotics</strong>.
-			</p>
-			<ul class="key-points">
-				<li><strong>Modular structure</strong>: systems are composed from reactors with well-defined interfaces.</li>
-				<li><strong>Logical time</strong>: events carry time tags, clarifying ordering and causality.</li>
-				<li><strong>Deterministic concurrency</strong>: parallel execution is allowed without sacrificing predictable outcomes.</li>
-				<li><strong>Platform versatility</strong>: the same model spans desktops, embedded devices, and distributed systems.</li>
-			</ul>
-		</section>
+      <section id="overview" class="overview">
+        <h2>High-level overview</h2>
+        <p>
+          In the reactor model, systems are built from <strong>reactors</strong>: modular components
+          that communicate via input and output ports. Reactors react to discrete events, which
+          are tagged with logical time, and are scheduled according to clear rules that respect
+          causality.
+        </p>
+        <p>
+          Because reactions are triggered by time-stamped events rather than low-level threads or
+          shared memory, the same design can be executed on a single machine, across a network, or on
+          resource-constrained embedded platforms while preserving deterministic behavior (when
+          desired). This makes the reactor model especially well-suited for
+          <strong>cyber-physical systems</strong>, <strong>real-time control</strong>, and
+          <strong>autonomous robotics</strong>.
+        </p>
+        <ul class="key-points">
+          <li><strong>Modular structure</strong>: systems are composed from reactors with well-defined interfaces.</li>
+          <li><strong>Logical time</strong>: events carry time tags, clarifying ordering and causality.</li>
+          <li><strong>Deterministic concurrency</strong>: parallel execution is allowed without sacrificing predictable outcomes.</li>
+          <li><strong>Platform versatility</strong>: the same model spans desktops, embedded devices, and distributed systems.</li>
+        </ul>
+      </section>
 
-		<section id="projects" class="projects">
-			<h2>Projects using the reactor model</h2>
-			<div class="cards">
-				<a
-					class="card"
-					href="https://lf-lang.org"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<h3>Lingua Franca (`lf-lang.org`)</h3>
-					<p>
-						Lingua Franca is a coordination language and toolchain for specifying reactor-based
-						systems and generating efficient code for a variety of platforms and targets.
-					</p>
-				</a>
+      <section id="projects" class="projects">
+        <h2>Projects using the reactor model</h2>
+        <div class="cards">
+          <a
+            class="card"
+            href="https://lf-lang.org"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>Lingua Franca (`lf-lang.org`)</h3>
+            <p>
+              Lingua Franca is a coordination language and toolchain for specifying reactor-based
+              systems and generating efficient code for a variety of platforms and targets.
+            </p>
+          </a>
 
-				<a
-					class="card"
-					href="https://www.xronos.com/#platform"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<h3>Xronos Platform</h3>
-					<p>
-						Xronos provides ready-to-deploy software infrastructure for scalable, safe,
-						AI-driven robotics and mobility solutions, with a focus on deterministic development,
-						real-time observability, and seamless integration.
-					</p>
-				</a>
+          <a
+            class="card"
+            href="https://www.xronos.com/#platform"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>Xronos Platform</h3>
+            <p>
+              Xronos provides ready-to-deploy software infrastructure for scalable, safe,
+              AI-driven robotics and mobility solutions, with a focus on deterministic development,
+              real-time observability, and seamless integration.
+            </p>
+          </a>
 
-				<a
-					class="card"
-					href="https://github.com/lf-lang/reactor-uc"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<h3>`reactor-uc` Runtime</h3>
-					<p>
-						`reactor-uc` is a lightweight reactor runtime targeted at distributed,
-						resource-constrained embedded systems, supporting platforms such as Zephyr, RIOT,
-						Raspberry Pi Pico, and POSIX hosts.
-					</p>
-				</a>
-			</div>
-		</section>
+          <a
+            class="card"
+            href="https://github.com/lf-lang/reactor-uc"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>`reactor-uc` Runtime</h3>
+            <p>
+              `reactor-uc` is a lightweight reactor runtime targeted at distributed,
+              resource-constrained embedded systems, supporting platforms such as Zephyr, RIOT,
+              Raspberry Pi Pico, and POSIX hosts.
+            </p>
+          </a>
+        </div>
+      </section>
 
-		<section id="events" class="events">
-			<h2>Events</h2>
-			<div class="cards">
-				<a class="card" href="/events/">
-					<h3>Events &amp; workshops</h3>
-					<p>
-						Past and upcoming workshops, including TCRS (Time-Centric Reactive Software)
-						and ReCPS, and other events related to the reactor model.
-					</p>
-				</a>
-			</div>
-		</section>
-	</main>
-
-	<style>
+      <section id="events" class="events">
+        <h2>Events</h2>
+        <div class="cards">
+          <a class="card" href="/events/">
+            <h3>Events &amp; workshops</h3>
+            <p>
+              Past and upcoming workshops, including TCRS (Time-Centric Reactive Software)
+              and ReCPS, and other events related to the reactor model.
+            </p>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <style>
 		.page {
 			max-width: 960px;
 			margin: 0 auto;
@@ -233,9 +234,11 @@ import Layout from '../layouts/Layout.astro';
 			background: #f9fafb;
 		}
 
-		@media (prefers-color-scheme: dark) {
-			.page {
-				color: #e5e7eb;
+    @media (prefers-color-scheme: dark) {
+      .page {
+        color: #e5e7eb;
+      }
+			.page-background {
 				background: radial-gradient(circle at top, #1f2937 0, #020617 55%);
 			}
 
