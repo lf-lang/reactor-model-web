@@ -7,6 +7,7 @@ const DATE_RECPS_WORKSHOP_URL = 'https://www.date-conference.com/workshop/w01';
 const LF_DOCS_URL = 'https://www.lf-lang.org/docs/';
 const LF_RESEARCH_URL = 'https://www.lf-lang.org/research';
 const EASychair_URL = 'https://easychair.org/conferences?conf=recps2026';
+const EAL_BIO_URL = 'https://eecs.berkeley.edu/~eal';
 ---
 
 <Layout title="ReCPS Workshop at DATE 2026 — Reactor Model of Computation">
@@ -39,6 +40,16 @@ const EASychair_URL = 'https://easychair.org/conferences?conf=recps2026';
 				<li>
 					<strong>2:00–2:50 pm</strong> — Keynote<br>
 					<span class="program-speaker">Prof. Edward A. Lee, University of California, Berkeley, US</span>
+					<div class="program-keynote-details">
+						<p><strong>Title:</strong> <em>Maxwait: A Generalized Mechanism for Distributed Time-Sensitive Systems</em></p>
+						<p><strong>Abstract:</strong>
+							Distributed time-sensitive systems must balance timing requirements (availability) and consistency in the presence of communication delays and synchronization uncertainty. This talk presents maxwait, a simple coordination mechanism with surprising generality that makes these tradeoffs explicit and configurable. We demonstrate that this mechanism subsumes classical distributed system methods such as PTIDES, Chandy-and-Misra with or without null messages, Jefferson&rsquo;s Time-Warp, and Lamport&rsquo;s time-based fault detection, while enabling real-time behavior in distributed cyber-physical applications. The mechanism can also realize many commonly used distributed system patterns, including logical execution time (LET), publish and subscribe, actors, conflict-free replicated data types (CRDTs), and remote procedure calls with futures. More importantly, it adds to these mechanisms better control over timing, bounded-time fault detection, and the option of making them more deterministic, all within a single semantic framework. Implemented as an extension of the Lingua Franca coordination language, maxwait enforces logical-time consistency when communication latencies are bounded and provides structured fault handling when bounds are violated.
+						</p>
+						<p><strong>Bio:</strong></p>
+						<p>
+							Edward A. Lee has been working on embedded software systems for more than 45 years. After studying and working at Yale, MIT, and Bell Labs, he landed at Berkeley, where he is now Distinguished Professor Emeritus and Professor of the Graduate School in EECS. He is co-founder of Xronos Inc. and BDTI, Inc. He leads the open-source software projects Lingua Franca and Ptolemy and is an author of books on embedded systems, signals and systems, digital communication, and philosophical and social implications of technology. His current research is focused on software for distributed cyber-physical systems and on what we can learn about humans from advances in AI. More details can be found at <a href={EAL_BIO_URL} target="_blank" rel="noopener noreferrer">{EAL_BIO_URL}</a>.
+						</p>
+					</div>
 				</li>
 				<li class="program-break">Short break</li>
 				<li>
@@ -473,6 +484,24 @@ const EASychair_URL = 'https://easychair.org/conferences?conf=recps2026';
 			padding-left: 0.5rem;
 		}
 
+		.program-keynote-details {
+			margin: 0.75rem 0 0 1rem;
+			padding: 0.75rem 1rem;
+			border-left: 3px solid #c7d2fe;
+			background: #f8fafc;
+			border-radius: 0.25rem;
+		}
+
+		.program-keynote-details p {
+			margin: 0 0 0.65rem;
+			color: #374151;
+			font-size: 0.95rem;
+		}
+
+		.program-keynote-details p:last-child {
+			margin-bottom: 0;
+		}
+
 		.program-papers-table {
 			width: 100%;
 			margin: 0.5rem 0 0;
@@ -575,6 +604,15 @@ const EASychair_URL = 'https://easychair.org/conferences?conf=recps2026';
 
 			.program-speaker {
 				color: #9ca3af;
+			}
+
+			.program-keynote-details {
+				background: rgba(30, 41, 59, 0.6);
+				border-left-color: #818cf8;
+			}
+
+			.program-keynote-details p {
+				color: #d1d5db;
 			}
 
 			.program-papers-table th,
