@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const REACTOR_MODEL_GOOGLE_GROUP_URL = 'https://groups.google.com/g/reactor-model/';
 ---
 
 <Layout>
@@ -12,6 +14,24 @@ import Layout from '../layouts/Layout.astro';
           behavior is deterministic, understandable, and predictable even in the presence of real-time
           interaction, distribution, and parallelism.
         </p>
+        <div class="subscribe-cta" role="region" aria-label="Community mailing list">
+          <div class="subscribe-cta-inner">
+            <div class="subscribe-cta-copy">
+              <span class="subscribe-cta-label">Community</span>
+              <p class="subscribe-cta-text">
+                Join the <a href={REACTOR_MODEL_GOOGLE_GROUP_URL} target="_blank" rel="noopener noreferrer" class="subscribe-cta-link">reactor-model Google Group</a> for announcements and discussion.
+              </p>
+            </div>
+            <a
+              href={REACTOR_MODEL_GOOGLE_GROUP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="subscribe-cta-button"
+            >
+              Subscribe on Google Groups
+            </a>
+          </div>
+        </div>
       </section>
 
       <nav class="section-nav" aria-label="Page sections">
@@ -156,6 +176,91 @@ import Layout from '../layouts/Layout.astro';
 			color: #374151;
 		}
 
+		.subscribe-cta {
+			margin-top: 1.75rem;
+			max-width: 46rem;
+			padding: 1.25rem 1.5rem;
+			border-radius: 0.75rem;
+			background: linear-gradient(135deg, #4338ca 0%, #6366f1 100%);
+			box-shadow:
+				0 4px 14px rgba(79, 70, 229, 0.35),
+				0 2px 4px rgba(15, 23, 42, 0.12);
+		}
+
+		.subscribe-cta-inner {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			gap: 1.25rem;
+		}
+
+		.subscribe-cta-copy {
+			flex: 1 1 16rem;
+			min-width: 0;
+		}
+
+		.subscribe-cta-label {
+			display: block;
+			font-size: 0.7rem;
+			font-weight: 700;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			color: rgba(255, 255, 255, 0.85);
+			margin-bottom: 0.35rem;
+		}
+
+		.subscribe-cta-text {
+			margin: 0;
+			font-size: 1rem;
+			line-height: 1.5;
+			color: rgba(255, 255, 255, 0.96);
+		}
+
+		.subscribe-cta-link {
+			color: #fff;
+			font-weight: 600;
+			text-decoration: underline;
+			text-underline-offset: 3px;
+		}
+
+		.subscribe-cta-link:hover {
+			color: #e0e7ff;
+		}
+
+		.subscribe-cta-button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			flex-shrink: 0;
+			padding: 0.85rem 1.5rem;
+			font-size: 1.05rem;
+			font-weight: 600;
+			color: #312e81 !important;
+			background: #fff;
+			border-radius: 0.5rem;
+			text-decoration: none;
+			box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+			transition:
+				background 0.15s,
+				color 0.15s,
+				transform 0.12s,
+				box-shadow 0.12s;
+			white-space: nowrap;
+		}
+
+		.subscribe-cta-button:hover {
+			background: #eef2ff;
+			color: #1e1b4b !important;
+			transform: translateY(-1px);
+			box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2);
+		}
+
+		.subscribe-cta-button:focus-visible {
+			outline: 2px solid #eef2ff;
+			outline-offset: 3px;
+		}
+
 		h2 {
 			font-size: 1.5rem;
 			margin: 2.5rem 0 1rem;
@@ -273,6 +378,23 @@ import Layout from '../layouts/Layout.astro';
 				color: #e5e7eb;
 				background: #334155;
 				box-shadow: none;
+			}
+
+			.subscribe-cta {
+				background: linear-gradient(135deg, #312e81 0%, #4f46e5 100%);
+				box-shadow:
+					0 4px 18px rgba(99, 102, 241, 0.35),
+					0 2px 6px rgba(0, 0, 0, 0.35);
+			}
+
+			.subscribe-cta-button {
+				color: #1e1b4b !important;
+				background: #f8fafc;
+			}
+
+			.subscribe-cta-button:hover {
+				background: #e0e7ff;
+				color: #0f172a !important;
 			}
 		}
 	</style>
